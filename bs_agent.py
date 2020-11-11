@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import baostock as bs
 import sys
 from util import *
