@@ -5,6 +5,7 @@ import pandas as pd
 class Indicator(Enum):
     KDJ_X = 'kdj_x'
     MACD_X = 'macd_x'
+    UDI = 'udi'
 
 def compute_macd(df):
     # 剔除停盘数据

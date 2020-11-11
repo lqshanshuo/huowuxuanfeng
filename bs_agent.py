@@ -53,7 +53,7 @@ class bsAgent:
             self.k_data_plus[['assets']].plot(title='assets',figsize=(30, 6.5))
         if indicator is Indicator.MACD_X:
             self.k_data_plus[['close']].plot(title='close',figsize=(30, 6.5))
-            ax = self.k_data_plus[['dif','dea','hist']].plot(title='KDJ',figsize=(30, 6.5))
+            ax = self.k_data_plus[['dif','dea','hist']].plot(title='MACD',figsize=(30, 6.5))
             ax.axhline(y=0)
             self.k_data_plus[['assets']].plot(title='assets',figsize=(30, 6.5))
         plt.show()
