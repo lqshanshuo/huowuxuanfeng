@@ -42,7 +42,8 @@ class bsAgent:
             data_list.append(res.get_row_data())
         df_data = pd.DataFrame(data_list, columns=res.fields)
         df_data.set_index(["date"], inplace=True)
-        df_data[['low','high','close']] = df_data[['low','high','close']].astype(float)
+        df_data.index=pd.to_datetime(df_data.index)
+        df_data[['low','high','open','close','volume']] = df_data[['low','high','open','close','volume']].astype(float)
         self._k_data = df_data
         self._k_data_plus = df_data
     def trade(self, trade, price):
